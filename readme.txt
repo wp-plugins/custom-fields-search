@@ -56,7 +56,7 @@ Go to the Settings page and select custom fields that you would like to add to t
 
 == Changelog ==
 
-= V1.0 - 15.08.2013=
+= V1.0 - 15.08.2013 =
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
