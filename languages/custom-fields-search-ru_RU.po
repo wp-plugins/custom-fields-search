@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-fields-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-29 12:09+0300\n"
+"POT-Creation-Date: 2013-09-04 15:48+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: BestWebSoft <http://support.bestwebsoft.com>\n"
@@ -15,283 +15,161 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-fields-search.php:106
-msgid "Not set"
-msgstr "Не задан"
-
-#: custom-fields-search.php:108
-#: custom-fields-search.php:112
-msgid "On"
-msgstr "Вкл"
-
-#: custom-fields-search.php:110
-#: custom-fields-search.php:114
-msgid "Off"
-msgstr "Выкл"
-
-#: custom-fields-search.php:118
-#: custom-fields-search.php:122
-#: custom-fields-search.php:126
-#: custom-fields-search.php:130
-#: custom-fields-search.php:134
-#: custom-fields-search.php:160
-msgid "N/A"
-msgstr "Неизвестно"
-
-#: custom-fields-search.php:132
-msgid " Mb"
-msgstr " Mb"
-
-#: custom-fields-search.php:136
-#: custom-fields-search.php:140
-#: custom-fields-search.php:144
-#: custom-fields-search.php:155
-msgid "Yes"
-msgstr "Да"
-
-#: custom-fields-search.php:138
-#: custom-fields-search.php:142
-#: custom-fields-search.php:146
-#: custom-fields-search.php:157
-msgid "No"
-msgstr "Нет"
-
-#: custom-fields-search.php:171
-msgid "Operating System"
-msgstr "Операционная система"
-
-#: custom-fields-search.php:172
-msgid "Server"
-msgstr "Тип сервера"
-
-#: custom-fields-search.php:173
-msgid "Memory usage"
-msgstr "Памяти использовано"
-
-#: custom-fields-search.php:174
-msgid "MYSQL Version"
-msgstr "Версия MYSQL"
-
-#: custom-fields-search.php:175
-msgid "SQL Mode"
-msgstr "Режим SQL"
-
-#: custom-fields-search.php:176
-msgid "PHP Version"
-msgstr "Версия PHP"
-
-#: custom-fields-search.php:177
-msgid "PHP Safe Mode"
-msgstr "PHP Safe Mode"
-
-#: custom-fields-search.php:178
-msgid "PHP Allow URL fopen"
-msgstr "PHP Allow URL fopen"
-
-#: custom-fields-search.php:179
-msgid "PHP Memory Limit"
-msgstr "Лимит памяти"
-
-#: custom-fields-search.php:180
-msgid "PHP Max Upload Size"
-msgstr "Макс. размер загружаемого файла"
-
-#: custom-fields-search.php:181
-msgid "PHP Max Post Size"
-msgstr "Макс. размер записи"
-
-#: custom-fields-search.php:182
-msgid "PHP Max Script Execute Time"
-msgstr "Макс. время выполнения сценария"
-
-#: custom-fields-search.php:183
-msgid "PHP Exif support"
-msgstr "Поддержка PHP Exif"
-
-#: custom-fields-search.php:184
-msgid "PHP IPTC support"
-msgstr "Поддержка PHP IPTC"
-
-#: custom-fields-search.php:185
-msgid "PHP XML support"
-msgstr "Поддержка PHP XML"
-
-#: custom-fields-search.php:186
-msgid "Site URL"
-msgstr "Адрес сайта"
-
-#: custom-fields-search.php:187
-msgid "Home URL"
-msgstr "Основной адрес сайта"
-
-#: custom-fields-search.php:188
-msgid "WordPress Version"
-msgstr "Версия WordPress"
-
-#: custom-fields-search.php:189
-msgid "WordPress DB Version"
-msgstr "Версия базы данных WordPress"
-
-#: custom-fields-search.php:190
-msgid "Multisite"
-msgstr "Мультиблог"
-
-#: custom-fields-search.php:191
-msgid "Active Theme"
-msgstr "Текущая тема"
-
-#: custom-fields-search.php:206
-msgid "Please enter a valid email address."
-msgstr "Пожалуйста, введите валидный емейл."
-
-#: custom-fields-search.php:210
-msgid "Email with system info is sent to "
-msgstr "E-mail с системной информацией отправлен на"
-
-#: custom-fields-search.php:214
-msgid "Thank you for contacting us."
-msgstr "Спасибо, что связались с нами."
-
-#: custom-fields-search.php:242
-msgid "Sorry, email message could not be delivered."
-msgstr "Извините, ваш email не может быть отправлен."
-
-#: custom-fields-search.php:250
-msgid "Pro plugins"
-msgstr "Pro плагины"
-
-#: custom-fields-search.php:253
-#: custom-fields-search.php:279
-msgid "Activated plugins"
-msgstr "Активированные плагины"
-
-#: custom-fields-search.php:255
-#: custom-fields-search.php:263
-#: custom-fields-search.php:271
-#: custom-fields-search.php:281
-#: custom-fields-search.php:289
-#: custom-fields-search.php:297
-msgid "Read more"
-msgstr "Подробнее..."
-
-#: custom-fields-search.php:255
-#: custom-fields-search.php:281
-#: custom-fields-search.php:539
-#: custom-fields-search.php:550
-msgid "Settings"
-msgstr "Настройки"
-
-#: custom-fields-search.php:261
-#: custom-fields-search.php:287
-msgid "Installed plugins"
-msgstr "Установленные плагины"
-
-#: custom-fields-search.php:269
-#: custom-fields-search.php:295
-msgid "Recommended plugins"
-msgstr "Рекомендованные к установке плагины"
-
-#: custom-fields-search.php:271
-msgid "Purchase"
-msgstr "Купить"
-
-#: custom-fields-search.php:276
-msgid "Free plugins"
-msgstr "Бесплатные плагины"
-
-#: custom-fields-search.php:297
-msgid "Download"
-msgstr "Скачать"
-
-#: custom-fields-search.php:297
-#, php-format
-msgid "Install %s"
-msgstr "Установлено %s"
-
-#: custom-fields-search.php:297
-msgid "Install now from wordpress.org"
-msgstr "Установить с wordpress.org"
-
-#: custom-fields-search.php:302
-msgid "If you have any questions, please contact us via"
-msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
-
-#: custom-fields-search.php:309
-msgid "System status"
-msgstr "Системная информация"
-
-#: custom-fields-search.php:313
-msgid "Environment"
-msgstr "Системная среда"
-
-#: custom-fields-search.php:324
-msgid "Active Plugins"
-msgstr "Активированные плагины"
-
-#: custom-fields-search.php:335
-msgid "Inactive Plugins"
-msgstr "Неактивированные плагины"
-
-#: custom-fields-search.php:349
-msgid "Send to support"
-msgstr "Отправить в тех.поддержку"
-
-#: custom-fields-search.php:356
-msgid "Send to custom email &#187;"
-msgstr "Отправить на емейл &#187;"
-
-#: custom-fields-search.php:372
+#: custom-fields-search.php:32
 msgid "Custom fields search settings"
 msgstr "Настройки поиска по кастомным полям"
 
-#: custom-fields-search.php:372
+#: custom-fields-search.php:32
 msgid "Custom fields search"
 msgstr "Поиск по кастомным полям"
 
-#: custom-fields-search.php:467
+#: custom-fields-search.php:127
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: custom-fields-search.php:482
+#: custom-fields-search.php:142
 msgid "Enable search for the custom field:"
 msgstr "Отображать поиск по кастомных полям для:"
 
-#: custom-fields-search.php:507
+#: custom-fields-search.php:167
 msgid "custom post type"
 msgstr "кастомный тип постов"
 
-#: custom-fields-search.php:512
+#: custom-fields-search.php:172
 msgid "You need to"
 msgstr "Вам нужно"
 
-#: custom-fields-search.php:512
+#: custom-fields-search.php:172
 msgid "activate plugin Custom Search"
 msgstr "активировать плагин Кастомного Поиска"
 
-#: custom-fields-search.php:514
+#: custom-fields-search.php:174
 msgid "If the type of the post is not default - you need to install and activate the plugin"
 msgstr "Если тип записи не стандартный - вам необходимо установить и активировать плагин"
 
-#: custom-fields-search.php:514
+#: custom-fields-search.php:174
 msgid "Custom Search"
 msgstr "Кастомный Поиск"
 
-#: custom-fields-search.php:523
+#: custom-fields-search.php:183
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: custom-fields-search.php:529
+#: custom-fields-search.php:189
 msgid "Custom fields not found."
 msgstr "Кастомные поля не найдены."
 
-#: custom-fields-search.php:551
+#: custom-fields-search.php:199
+#: custom-fields-search.php:210
+msgid "Settings"
+msgstr "Настройки"
+
+#: custom-fields-search.php:211
 msgid "FAQ"
 msgstr "Часто задаваемые вопросы"
 
-#: custom-fields-search.php:552
+#: custom-fields-search.php:212
 msgid "Support"
 msgstr "Тех.поддержка"
 
+#~ msgid "Not set"
+#~ msgstr "Не задан"
+#~ msgid "On"
+#~ msgstr "Вкл"
+#~ msgid "Off"
+#~ msgstr "Выкл"
+#~ msgid "N/A"
+#~ msgstr "Неизвестно"
+#~ msgid " Mb"
+#~ msgstr " Mb"
+#~ msgid "Yes"
+#~ msgstr "Да"
+#~ msgid "No"
+#~ msgstr "Нет"
+#~ msgid "Operating System"
+#~ msgstr "Операционная система"
+#~ msgid "Server"
+#~ msgstr "Тип сервера"
+#~ msgid "Memory usage"
+#~ msgstr "Памяти использовано"
+#~ msgid "MYSQL Version"
+#~ msgstr "Версия MYSQL"
+#~ msgid "SQL Mode"
+#~ msgstr "Режим SQL"
+#~ msgid "PHP Version"
+#~ msgstr "Версия PHP"
+#~ msgid "PHP Safe Mode"
+#~ msgstr "PHP Safe Mode"
+#~ msgid "PHP Allow URL fopen"
+#~ msgstr "PHP Allow URL fopen"
+#~ msgid "PHP Memory Limit"
+#~ msgstr "Лимит памяти"
+#~ msgid "PHP Max Upload Size"
+#~ msgstr "Макс. размер загружаемого файла"
+#~ msgid "PHP Max Post Size"
+#~ msgstr "Макс. размер записи"
+#~ msgid "PHP Max Script Execute Time"
+#~ msgstr "Макс. время выполнения сценария"
+#~ msgid "PHP Exif support"
+#~ msgstr "Поддержка PHP Exif"
+#~ msgid "PHP IPTC support"
+#~ msgstr "Поддержка PHP IPTC"
+#~ msgid "PHP XML support"
+#~ msgstr "Поддержка PHP XML"
+#~ msgid "Site URL"
+#~ msgstr "Адрес сайта"
+#~ msgid "Home URL"
+#~ msgstr "Основной адрес сайта"
+#~ msgid "WordPress Version"
+#~ msgstr "Версия WordPress"
+#~ msgid "WordPress DB Version"
+#~ msgstr "Версия базы данных WordPress"
+#~ msgid "Multisite"
+#~ msgstr "Мультиблог"
+#~ msgid "Active Theme"
+#~ msgstr "Текущая тема"
+#~ msgid "Please enter a valid email address."
+#~ msgstr "Пожалуйста, введите валидный емейл."
+#~ msgid "Email with system info is sent to "
+#~ msgstr "E-mail с системной информацией отправлен на"
+#~ msgid "Thank you for contacting us."
+#~ msgstr "Спасибо, что связались с нами."
+#~ msgid "Sorry, email message could not be delivered."
+#~ msgstr "Извините, ваш email не может быть отправлен."
+#~ msgid "Pro plugins"
+#~ msgstr "Pro плагины"
+#~ msgid "Activated plugins"
+#~ msgstr "Активированные плагины"
+#~ msgid "Read more"
+#~ msgstr "Подробнее..."
+#~ msgid "Installed plugins"
+#~ msgstr "Установленные плагины"
+#~ msgid "Recommended plugins"
+#~ msgstr "Рекомендованные к установке плагины"
+#~ msgid "Purchase"
+#~ msgstr "Купить"
+#~ msgid "Free plugins"
+#~ msgstr "Бесплатные плагины"
+#~ msgid "Download"
+#~ msgstr "Скачать"
+#~ msgid "Install %s"
+#~ msgstr "Установлено %s"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Установить с wordpress.org"
+#~ msgid "If you have any questions, please contact us via"
+#~ msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+#~ msgid "System status"
+#~ msgstr "Системная информация"
+#~ msgid "Environment"
+#~ msgstr "Системная среда"
+#~ msgid "Active Plugins"
+#~ msgstr "Активированные плагины"
+#~ msgid "Inactive Plugins"
+#~ msgstr "Неактивированные плагины"
+#~ msgid "Send to support"
+#~ msgstr "Отправить в тех.поддержку"
+#~ msgid "Send to custom email &#187;"
+#~ msgstr "Отправить на емейл &#187;"
 #~ msgid "Search by custom fields"
 #~ msgstr "Поиск по кастомным полям"
 #~ msgid "Search By Custom Fields Settings"
