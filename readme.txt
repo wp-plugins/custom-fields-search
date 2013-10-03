@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 1.1
+Tested up to: 3.6.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -23,6 +23,7 @@ This plugin allows you to add website search any existing custom fields in defau
 = Translation =
 
 * Russian (ru_RU)
+* Ukrainian (uk)
  
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -56,6 +57,10 @@ Go to the Settings page and select custom fields that you would like to add to t
 
 == Changelog ==
 
+= V1.1.1 - 02.10.2013 =
+* Update : We updated all functionality for wordpress 3.6.1.
+* NEW : The Ukrainian language file is added to the plugin.
+
 = V1.1 - 04.09.2013 =
 * Update : Function for displaying BWS plugins section placed in a separate file and has own language files.
 
@@ -63,6 +68,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.1 =
+We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.
 
 = V1.1 =
 Function for displaying BWS plugins section placed in a separate file and has own language files.

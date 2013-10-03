@@ -19,6 +19,9 @@
 .bws_system_info_meta_box {
     width: 850px;
 }
+.bws_system_info_meta_box .hndle {
+    cursor: pointer !important;
+}
 .bws_system_info {
     float: left;
     margin-right: 10px;
@@ -30,8 +33,9 @@
     width: 50%;
 }
 .bws_system_info tbody td {
-	border-bottom: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
 }
+
 .value_of_metakey {
 	text-transform: capitalize; 
 	padding-left: 5px;
