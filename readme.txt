@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 1.1.1
+Tested up to: 3.7.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -13,12 +13,19 @@ This plugin allows you to add website search any existing custom fields.
 
 This plugin allows you to add website search any existing custom fields in default post types. On the plugin page displays a list of all of custom fields that allow you to choose what kind of custom fields will be included in search.
 
-<a href="http://wordpress.org/extend/plugins/custom-fields-search/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/custom-fields-search/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
 
 * Actions: Add selected custom fields to the search.
+
+= Recommended Plugins =
+
+The author of the Custom Fields Search also recommends the following plugins:
+
+* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=591bf97cadc3e21606c79b37e04e4543">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
 
 = Translation =
 
@@ -57,6 +64,10 @@ Go to the Settings page and select custom fields that you would like to add to t
 
 == Changelog ==
 
+= V1.1.2 - 30.10.2013 =
+* Update : We updated all functionality for wordpress 3.7.1.
+* Bugfix : Fixed problem with Custom Search plugin network activation.
+
 = V1.1.1 - 02.10.2013 =
 * Update : We updated all functionality for wordpress 3.6.1.
 * NEW : The Ukrainian language file is added to the plugin.
@@ -68,6 +79,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.2 =
+We updated all functionality for wordpress 3.7.1. Fixed problem with Custom Search plugin network activation.
 
 = V1.1.1 =
 We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.
