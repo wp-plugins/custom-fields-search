@@ -5,16 +5,13 @@
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $wpdb, $wp_version, $title;
+		if ( ! function_exists( 'is_plugin_active_for_network' ) )
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		$all_plugins = get_plugins();
 		$error = '';
 		$message = '';
 		$bwsmn_form_email = '';
-		if ( is_multisite() ) {
-			$active_plugins = (array) array_keys( get_site_option( 'active_sitewide_plugins', array() ) );
-			$active_plugins = array_merge( $active_plugins , get_option( 'active_plugins' ) );
-		} else {
-			$active_plugins = get_option( 'active_plugins' );
-		}
+		$active_plugins = get_option( 'active_plugins' );
 
 		$array_activate = array();
 		$array_install	= array();
@@ -38,7 +35,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'contact-form-to-db\/contact_form_to_db.php', 'Contact Form to DB', 'http://bestwebsoft.com/plugin/contact-form-to-db/', 'http://bestwebsoft.com/plugin/contact-form-to-db/#download', '/wp-admin/plugin-install.php?tab=search&s=Contact+Form+to+DB+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=cntctfrmtdb_settings' )
 		);
 		foreach ( $array_plugins as $plugins ) {
-			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
+			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) || is_plugin_active_for_network( str_replace( '\\', '', $plugins[0] ) ) ) {
 				$array_activate[ $count_activate ]["title"]		= $plugins[1];
 				$array_activate[ $count_activate ]["link"]		= $plugins[2];
 				$array_activate[ $count_activate ]["href"]		= $plugins[3];
@@ -69,7 +66,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'contact-form-to-db-pro\/contact_form_to_db_pro.php', 'Contact Form to DB Pro', 'http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=6ce5f4a9006ec906e4db643669246c6a', 'http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=6ce5f4a9006ec906e4db643669246c6a#purchase', 'admin.php?page=cntctfrmtdbpr_settings' )
 		);
 		foreach ( $array_plugins_pro as $plugins ) {
-			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
+			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) || is_plugin_active_for_network( str_replace( '\\', '', $plugins[0] ) ) ) {
 				$array_activate_pro[ $count_activate_pro ]["title"] = $plugins[1];
 				$array_activate_pro[ $count_activate_pro ]["link"]	= $plugins[2];
 				$array_activate_pro[ $count_activate_pro ]["href"]	= $plugins[3];

@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.2
+Version: 1.1.3
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -136,6 +136,8 @@ if ( ! function_exists( 'cstmfldssrch_request' ) ) {
 if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 	function  cstmfldssrch_page_of_settings() {
 		global $wpdb, $cstmfldssrch_array_options, $wpmu;
+		if ( ! function_exists( 'is_plugin_active_for_network' ) )
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		if ( isset( $_REQUEST['cstmfldssrch_submit_nonce'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'cstmfldssrch_nonce_name' ) ) {
 			$cstmfldssrch_array_options = isset( $_REQUEST['cstmfldssrch_array_options'] ) ? $_REQUEST['cstmfldssrch_array_options'] : array() ;
 			update_option( 'cstmfldssrch_options', $cstmfldssrch_array_options );
@@ -143,7 +145,6 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 		} /* Retrieve all the values ​​of custom fields from the database - the keys */
 		$meta_key_custom_posts	=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " JOIN " . $wpdb->posts . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE  " . $wpdb->posts . ".post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item') AND meta_key NOT REGEXP '^_'" );
 		$meta_key_result		=	$wpdb->get_col( "SELECT DISTINCT(meta_key) FROM " . $wpdb->postmeta . " WHERE meta_key NOT REGEXP '^_'" );//select all user's meta_key from table `wp_postmeta`
-		$active_plugins_network	=	get_site_option( 'active_sitewide_plugins' );
 		$active_plugins			=	get_option( 'active_plugins' );
 		$install_plugins		=	get_plugins();
 		$path_plugin			=	'custom-search-plugin/custom-search-plugin.php';?>
@@ -156,7 +157,7 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 					<table class="form-table">
 						<tr valign="top">
 							<th scope="row"><?php _e( 'Enable search for the custom field:', 'custom-fields-search' ); ?> </th>
-							<?php if ( in_array( $path_plugin, $active_plugins ) || array_key_exists( $path_plugin, $active_plugins_network ) ) { /* If Custom Search is activated for site or network */ ?>
+							<?php if ( in_array( $path_plugin, $active_plugins ) || is_plugin_active_for_network( $path_plugin ) ) { /* If Custom Search is activated for site or network */ ?>
 								<td>
 									<?php foreach ( $meta_key_result as $value ) { ?>
 										<label><input type="checkbox" <?php echo ( in_array( $value, $cstmfldssrch_array_options ) ?  'checked="checked"' : "" ); ?> name="cstmfldssrch_array_options[]" value="<?php echo $value; ?>"/><span class="value_of_metakey"><?php echo $value; ?></span></label><br />
