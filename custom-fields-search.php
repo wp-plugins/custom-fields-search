@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.3
+Version: 1.1.4
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -84,8 +84,8 @@ if ( ! function_exists ( 'cstmfldssrch_admin_head' ) ) {
 	function cstmfldssrch_admin_head() {
 		wp_register_style( 'cstmfldssrch_style', plugins_url( 'css/style.css', __FILE__ ) );
 		wp_enqueue_style( 'cstmfldssrch_style' );
-		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" )
-			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );
+		if ( isset( $_GET['page'] ) && "bws_plugins" == $_GET['page'] )
+			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js', __FILE__ ) );
 	}
 }
 
@@ -243,7 +243,7 @@ if ( ! function_exists( 'cstmfldssrch_delete_options' ) ) {
 }
 
 add_action( 'admin_menu', 'cstmfldssrch_add_to_admin_menu' );
-add_action( 'admin_init', 'cstmfldssrch_register_options' );
+add_action( 'init', 'cstmfldssrch_register_options' );
 add_action( 'admin_init', 'cstmfldssrch_translate' );
 add_action( 'admin_init', 'cstmfldssrch_version_check' );
 add_action( 'admin_enqueue_scripts', 'cstmfldssrch_admin_head' );
