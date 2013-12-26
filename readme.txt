@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 1.1.4
+Tested up to: 3.8
+Stable tag: 1.1.5
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -64,6 +64,10 @@ Go to the Settings page and select custom fields that you would like to add to t
 
 == Changelog ==
 
+= V1.1.5 - 26.12.2013 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.
+
 = V1.1.4 - 13.11.2013 =
 * Bugfix : The bug of search results is fixed.
 
@@ -85,6 +89,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.5 =
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.
 
 = V1.1.4 =
 The bug of search results is fixed.

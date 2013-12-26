@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.4
+Version: 1.1.5
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -38,7 +38,13 @@ if ( ! function_exists( 'cstmfldssrch_add_to_admin_menu' ) ) {
 /* Function create column in table wp_options for option of this plugin. If this column exists - save value in variable. */
 if ( ! function_exists( 'cstmfldssrch_register_options' ) ) {
 	function cstmfldssrch_register_options() {
-		global $wpmu, $cstmfldssrch_array_options;
+		global $wpmu, $cstmfldssrch_array_options, $bws_plugin_info;
+
+		if ( function_exists( 'get_plugin_data' ) && ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) ) {
+			$plugin_info = get_plugin_data( __FILE__ );	
+			$bws_plugin_info = array( 'id' => '85', 'version' => $plugin_info["Version"] );
+		};
+
 		$search_cusfields_defaults = array();
 		if ( 1 == $wpmu ) {
 			if( ! get_site_option( 'cstmfldssrch_options' ) ) {
@@ -82,8 +88,11 @@ if ( ! function_exists ( 'cstmfldssrch_version_check' ) ) {
 /* Function are using to register script jQuery */
 if ( ! function_exists ( 'cstmfldssrch_admin_head' ) ) {
 	function cstmfldssrch_admin_head() {
-		wp_register_style( 'cstmfldssrch_style', plugins_url( 'css/style.css', __FILE__ ) );
-		wp_enqueue_style( 'cstmfldssrch_style' );
+		global $wp_version;
+		if ( $wp_version < 3.8 )
+			wp_enqueue_style( 'cstmfldssrch_style', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
+		else
+			wp_enqueue_style( 'cstmfldssrch_style', plugins_url( 'css/style.css', __FILE__ ) );
 		if ( isset( $_GET['page'] ) && "bws_plugins" == $_GET['page'] )
 			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js', __FILE__ ) );
 	}
@@ -152,8 +161,9 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo get_admin_page_title(); ?></h2>
 			<div class="updated fade" <?php if( ! isset( $_REQUEST['cstmfldssrch_submit_nonce'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<div id="cstmfldssrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-fields-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-fields-search' ); ?></p></div>
 			<?php if( 0 < count( $meta_key_result ) ) { ?>
-				<form method="post" action="" style="margin-top: 10px;">
+				<form method="post" action="" style="margin-top: 10px;" id="cstmfldssrch_settings_form">
 					<table class="form-table">
 						<tr valign="top">
 							<th scope="row"><?php _e( 'Enable search for the custom field:', 'custom-fields-search' ); ?> </th>
@@ -205,6 +215,17 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 				echo '<br/>';
 				_e( 'Custom fields not found.', 'custom-fields-search' );
 			} ?>
+			<br />
+			<div class="bws-plugin-reviews">
+				<div class="bws-plugin-reviews-rate">
+				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-fields-search' ); ?>:<br/>
+				<a href="http://wordpress.org/support/view/plugin-reviews/custom-fields-search" target="_blank" title="Custom Fields Search reviews"><?php _e( 'Rate the plugin', 'custom-fields-search' ); ?></a><br/>
+				</div>
+				<div class="bws-plugin-reviews-support">
+				<?php _e( 'If there is something wrong about it, please contact us', 'custom-fields-search' ); ?>:<br/>
+				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+				</div>
+			</div>
 		</div>
 	<?php }
 }
@@ -234,6 +255,27 @@ if ( ! function_exists ( 'cstmfldssrch_links' ) ) {
 	}
 }
 
+if ( ! function_exists('cstmfldssrch_admin_js') ) {
+	function cstmfldssrch_admin_js() {
+		if ( isset( $_GET['page'] ) && "custom_fields_search.php" == $_GET['page'] ) {
+			/* add notice about changing in the settings page */
+			?>
+			<script type="text/javascript">
+				(function($) {
+					$(document).ready( function() {
+						$( '#cstmfldssrch_settings_form input' ).bind( "change click select", function() {
+							if ( $( this ).attr( 'type' ) != 'submit' ) {
+								$( '.updated.fade' ).css( 'display', 'none' );
+								$( '#cstmfldssrch_settings_notice' ).css( 'display', 'block' );
+							};
+						});
+					});
+				})(jQuery);
+			</script>
+		<?php }
+	}
+}
+
 /* Function for delete options from table `wp_options` */
 if ( ! function_exists( 'cstmfldssrch_delete_options' ) ) {
 	function cstmfldssrch_delete_options() {
@@ -244,14 +286,18 @@ if ( ! function_exists( 'cstmfldssrch_delete_options' ) ) {
 
 add_action( 'admin_menu', 'cstmfldssrch_add_to_admin_menu' );
 add_action( 'init', 'cstmfldssrch_register_options' );
+add_action( 'admin_init', 'cstmfldssrch_register_options' );
 add_action( 'admin_init', 'cstmfldssrch_translate' );
 add_action( 'admin_init', 'cstmfldssrch_version_check' );
 add_action( 'admin_enqueue_scripts', 'cstmfldssrch_admin_head' );
 add_action( 'wp_enqueue_scripts', 'cstmfldssrch_admin_head' );
+add_action( 'admin_head', 'cstmfldssrch_admin_js' );
+
 add_filter( 'posts_distinct', 'cstmfldssrch_distinct' );
 add_filter( 'posts_join', 'cstmfldssrch_join' );
 add_filter( 'posts_where', 'cstmfldssrch_request' );
 add_filter( 'plugin_action_links', 'cstmfldssrch_action_links', 10, 2 );
 add_filter( 'plugin_row_meta', 'cstmfldssrch_links', 10, 2 );
+
 register_uninstall_hook( __FILE__, 'cstmfldssrch_delete_options' );
 ?>
