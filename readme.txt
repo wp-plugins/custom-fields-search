@@ -1,10 +1,10 @@
 === Custom Fields Search ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.1.6
+Tested up to: 3.9
+Stable tag: 1.1.7
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -60,7 +60,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit?pli=1" target="_blank">Instuction on System Status</a>
 
 = Usage =
 
@@ -72,7 +72,11 @@ Go to the Settings page and select custom fields that you would like to add to t
 
 == Changelog ==
 
-= V1.1.6 - 11.02.2014 =
+= V1.1.7 - 24.04.2014 =
+* Update : We updated all functionality for wordpress 3.9.
+* Bugfix : Plugin optimization is done.
+
+= V1.1.6 - 07.02.2014 =
 * Update : Screenshots are updated.
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 3.8.1.
@@ -102,6 +106,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.7 =
+We updated all functionality for wordpress 3.9. Plugin optimization is done.
 
 = V1.1.6 =
 Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1.
