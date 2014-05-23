@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-23 13:54+0300\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: BestWebSoft <support@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <http://support.bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: custom-fields-search.php:73
 msgid "Custom fields search settings"
-msgstr "Настройки поиска по кастомным полям"
+msgstr "Настройки Custom Fields Search"
 
 #: custom-fields-search.php:73
 msgid "Custom fields search"
-msgstr "Поиск по кастомным полям"
+msgstr "Custom fields search"
 
 #: custom-fields-search.php:142
 msgid "requires"
@@ -74,7 +74,7 @@ msgstr "Вам нужно"
 
 #: custom-fields-search.php:273
 msgid "activate plugin Custom Search"
-msgstr "активировать плагин Кастомного Поиска"
+msgstr "активировать плагин Custom Search"
 
 #: custom-fields-search.php:275
 msgid ""
@@ -86,7 +86,7 @@ msgstr ""
 
 #: custom-fields-search.php:275
 msgid "Custom Search"
-msgstr "Кастомный Поиск"
+msgstr "Custom Search"
 
 #: custom-fields-search.php:284
 msgid "Save Changes"

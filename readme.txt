@@ -1,10 +1,10 @@
 === Custom Fields Search ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
-Tags: custom, field, search, custom search, custom field, custom search plugin, custom fields search, search by custom fields.
+Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
-Tested up to: 3.9
-Stable tag: 1.1.7
+Tested up to: 3.9.1
+Stable tag: 1.1.8
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -12,6 +12,8 @@ This plugin allows you to add website search any existing custom fields.
 == Description ==
 
 This plugin allows you to add website search any existing custom fields in default post types. On the plugin page displays a list of all of custom fields that allow you to choose what kind of custom fields will be included in search.
+
+http://www.youtube.com/watch?v=evQI4T5v9DA
 
 <a href="http://wordpress.org/plugins/custom-fields-search/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -30,6 +32,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 = Translation =
 
 * Russian (ru_RU)
+* Spanish (es_ES)(thanks to <a href="mailto:mquico@gmail.com">Mquico</a>)
 * Ukrainian (uk)
  
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -72,6 +75,10 @@ Go to the Settings page and select custom fields that you would like to add to t
 
 == Changelog ==
 
+= V1.1.8 - 23.05.2014 =
+* Update : We updated all functionality for wordpress 3.9.1.
+* NEW : The Spanish language file is added to the plugin.
+
 = V1.1.7 - 24.04.2014 =
 * Update : We updated all functionality for wordpress 3.9.
 * Bugfix : Plugin optimization is done.
@@ -106,6 +113,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.8 =
+We updated all functionality for wordpress 3.9.1. The Spanish language file is added to the plugin.
 
 = V1.1.7 =
 We updated all functionality for wordpress 3.9. Plugin optimization is done.

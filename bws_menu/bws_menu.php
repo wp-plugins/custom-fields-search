@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.2.8
+* Version: 1.3.2
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
@@ -198,7 +198,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/sender/?k=89c297d14ba85a8417a0f2fc05e089c7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/sender/?k=89c297d14ba85a8417a0f2fc05e089c7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Sender+Bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=sndr_settings'
+				'settings'		=> 'admin.php?page=sndr_settings',
+				'pro_version'	=> 'sender-pro/sender-pro.php'
 			),
 			'subscriber/subscriber.php' => array(
 				'name'			=> 'Subscriber',
@@ -233,6 +234,23 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/plugin/bws-google-analytics/?k=261c74cad753fb279cdf5a5db63fbd43&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=BestWebSoft+Google+Analytics&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=bws-google-analytics.php'
+			),
+			'db-manager/db-manager.php' => array(
+				'name'			=> 'DB manager',
+				'description'	=> 'Allows you to download the latest version of PhpMyadmin and Dumper and manage your site.',
+				'link'			=> 'http://bestwebsoft.com/plugin/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> 'http://bestwebsoft.com/plugin/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'settings'		=> 'admin.php?page=db-manager.php'
+			),
+			'user-role/user-role.php' => array(
+				'name'			=> 'User Role',
+				'description'	=> 'Allows to change wordpress user role capabilities.',
+				'link'			=> 'http://bestwebsoft.com/plugin/user-role/?k=dfe2244835c6fbf601523964b3f34ccc&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/user-role/?k=dfe2244835c6fbf601523964b3f34ccc&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> 'http://bestwebsoft.com/plugin/user-role/?k=dfe2244835c6fbf601523964b3f34ccc&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'settings'		=> 'admin.php?page=user-role.php',
+				'pro_version'	=> 'user-role-pro/user-role-pro.php'
 			)
 		);
 		$bws_plugins_pro	= array(
@@ -319,6 +337,20 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/contact-form-multi-pro/?k=fde3a18581c143654f060c398b07e8ac&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'purchase' 		=> 'http://bestwebsoft.com/plugin/contact-form-multi-pro/?k=fde3a18581c143654f060c398b07e8ac&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
 				'settings' 		=> ''
+			),
+			'user-role-pro/user-role-pro.php' => array(
+				'name'			=> 'User Role Pro',
+				'description'	=> 'Allows to change wordpress user role capabilities.',
+				'link'			=> 'http://bestwebsoft.com/plugin/user-role-pro/?k=cfa9cea6613fb3d7c0a3622fa2faaf46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/user-role-pro/?k=cfa9cea6613fb3d7c0a3622fa2faaf46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=user-role-pro.php'
+			),
+			'sender-pro/sender-pro.php' => array(
+				'name'			=> 'Sender Pro',
+				'description'	=> 'You can send mails to all users or to certain categories of users.',
+				'link'			=> 'http://bestwebsoft.com/plugin/sender-pro/?k=dc5d1a87bdc8aeab2de40ffb99b38054&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/sender-pro/?k=dc5d1a87bdc8aeab2de40ffb99b38054&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings'		=> 'admin.php?page=sndrpr_settings'
 			)
 		);
 		

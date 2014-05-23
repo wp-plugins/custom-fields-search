@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.7
+Version: 1.1.8
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -29,7 +29,8 @@ License: GPLv2 or later
 if ( ! function_exists( 'cstmfldssrch_add_to_admin_menu' ) ) {
 	function cstmfldssrch_add_to_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.8';
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename( __FILE__ );
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -219,6 +220,10 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo get_admin_page_title(); ?></h2>
+			<h2 class="nav-tab-wrapper">
+				<a class="nav-tab nav-tab-active" href="admin.php?page=custom-fields-search.php"><?php _e( 'Settings', 'custom-fields-search' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/custom-fields-search/#faq" target="_blank"><?php _e( 'FAQ', 'custom-fields-search' ); ?></a>
+			</h2>			
 			<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmfldssrch_submit_nonce'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div id="cstmfldssrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-fields-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-fields-search' ); ?></p></div>
 			<?php if ( 0 < count( $meta_key_result ) ) { ?>
