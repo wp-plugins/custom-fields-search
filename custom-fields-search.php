@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.8
+Version: 1.1.9
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -179,21 +179,64 @@ if ( ! function_exists( 'cstmfldssrch_join' ) ) {
 }
 
 /* Function adds in request keyword search on custom fields, and list of meta_key, which user has selected */
-if ( ! function_exists( 'cstmfldssrch_request' ) ) {
+if( ! function_exists( 'cstmfldssrch_request' ) ) {
 	function cstmfldssrch_request( $where ) {
 		global $wp_query, $wpdb, $cstmfldssrch_array_options;
 		$pos = strrpos( $where, '%' );
 		if ( is_search() && false !== $pos && ! empty( $wp_query->query_vars['s'] ) && ! empty( $cstmfldssrch_array_options ) ) {
-			$end_pos_where = 5 + $pos; /* Find position of the end of the request with check the type and status of the post  */
-			$end_of_where_request = substr( $where, $end_pos_where ); /* Save check the type and status of the post in variable */
-			$cusfields_sql_request = "'" . implode( "', '", $cstmfldssrch_array_options ) . "'"; /* Forming a string with the list of meta_key, which user has selected */
+			$end_pos_where = 5 + $pos; /* find position of the end of the request with check the type and status of the post */
+			$end_of_where_request = substr( $where, $end_pos_where ); /* save check the type and status of the post in variable */
+			/* Exclude for gallery and gallery pro from search - dont show attachment with keywords */
+			$flag_gllr_image = array();			 
+			if ( in_array( 'gllr_image_text', $cstmfldssrch_array_options ) || in_array( 'gllr_image_alt_tag', $cstmfldssrch_array_options ) ||
+				in_array( 'gllr_link_url', $cstmfldssrch_array_options ) || in_array( 'gllr_image_description', $cstmfldssrch_array_options ) ||
+				in_array( 'gllr_lightbox_button_url', $cstmfldssrch_array_options ) ) {
+				foreach ( $cstmfldssrch_array_options as $key => $value ) {
+					if ( 'gllr_image_text' == $value || 'gllr_link_url' == $value || 'gllr_image_alt_tag' == $value ||
+					 'gllr_lightbox_button_url' == $value || 'gllr_image_description' == $value ) {
+						unset( $cstmfldssrch_array_options[ $key ] );
+						$flag_gllr_image[] = $value;
+					}
+				}
+			}
+			$cusfields_sql_request = "'" . implode("', '", $cstmfldssrch_array_options ) . "'"; /* forming a string with the list of meta_key, which user has selected */
 			$user_request = trim ( $wp_query->query_vars['s'] );
 			$user_request_arr = preg_split( "/[\s,]+/", $user_request ); /* The user's regular expressions are used to separate array for the desired keywords */
 			$where .=  " OR (" . $wpdb->postmeta . ".meta_key IN (" . $cusfields_sql_request . ") "; /* Modify the request */
+
 			foreach ( $user_request_arr as $value ) {
 				$where .= "AND " . $wpdb->postmeta . ".meta_value LIKE '%" . $value . "%' ";
-			}
+			} 
 			$where .= $end_of_where_request . ") ";
+			/* This code special for gallery plugin */
+			if ( ! empty( $flag_gllr_image ) ) {
+				foreach ( $flag_gllr_image as $flag_gllr_image_key => $flag_gllr_image_value ) {
+
+					$where_new_end = '';
+					/* save search keywords */
+					foreach ( $user_request_arr as $value ) {
+						$where_new_end .= "AND " . $wpdb->postmeta . ".meta_value LIKE '%" . $value . "%' ";
+					}
+					/* search posts-attachments */			
+					$id_attachment_arr = $wpdb->get_col( "SELECT " . $wpdb->posts . ".id FROM " . $wpdb->postmeta . " JOIN " . $wpdb->posts . " ON " . $wpdb->posts . ".id = " . $wpdb->postmeta . ".post_id WHERE  " . $wpdb->postmeta . ".meta_key = '" . $flag_gllr_image_value . "' " . $where_new_end );	
+					/* if posts-attachments exists - search gallery post ID */
+					if ( ! empty( $id_attachment_arr ) ) {
+						$array_id_gallery = array();
+						foreach ( $id_attachment_arr as $value ) {
+							$id_gallery = $wpdb->get_col( "SELECT DISTINCT(" . $wpdb->posts . ".post_parent) FROM " . $wpdb->posts . " WHERE " . $wpdb->posts . ".ID = " . $value );
+							if ( ! in_array( $id_gallery[0],$array_id_gallery ) ) {
+								$array_id_gallery[] = $id_gallery[0];
+							}
+						}
+					}
+					/* if gallery post ID exists - show on page */
+					if ( ! empty( $array_id_gallery ) ) {
+						foreach ( $array_id_gallery as $value ) {
+							$where .= " OR " . $wpdb->posts . ".ID = " . $value;
+						}
+					}
+				}
+			}
 		}
 		return $where;
 	}

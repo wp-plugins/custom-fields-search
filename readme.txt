@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -57,6 +57,10 @@ We can fix some things for free for the users who provide translation of our plu
 
 You need to check the type of the post for which you include the search for custom fields. If the type of the post is not default - you need to search by the Custom post (you can do this using the plugin from bestwebsoft "Custom Search").
 
+= Usage =
+
+Go to the Settings page and select custom fields that you would like to add to the search.
+
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
@@ -65,15 +69,14 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. the version of your WordPress installation
 4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit?pli=1" target="_blank">Instuction on System Status</a>
 
-= Usage =
-
-Go to the Settings page and select custom fields that you would like to add to the search.
-
 == Screenshots ==
 
 1. Custom fields search Settings page.
 
 == Changelog ==
+
+= V1.1.9 - 06.06.2014 =
+* Bugfix : The bug related to the search by image custom fields in the Gallery and Gallery pro plugin by BestWebSoft has been fixed.
 
 = V1.1.8 - 23.05.2014 =
 * Update : We updated all functionality for wordpress 3.9.1.
@@ -113,6 +116,9 @@ Go to the Settings page and select custom fields that you would like to add to t
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.1.9 =
+The bug related to the search by image custom fields in the Gallery and Gallery pro plugin by BestWebSoft has been fixed.
 
 = V1.1.8 =
 We updated all functionality for wordpress 3.9.1. The Spanish language file is added to the plugin.
