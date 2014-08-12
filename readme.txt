@@ -3,15 +3,15 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 1.1.9
+Tested up to: 4.0-beta3
+Stable tag: 1.2.0
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
 
 == Description ==
 
-This plugin allows you to add website search any existing custom fields in default post types. On the plugin page displays a list of all of custom fields that allow you to choose what kind of custom fields will be included in search.
+This plugin allows you to add custom website search field in any post. It comes with a list of custom fields. All you need is to choose which of them you want to see in search. Make your site useful and effective with the Custom Field Search Plugin.
 
 http://www.youtube.com/watch?v=evQI4T5v9DA
 
@@ -75,6 +75,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.2.0 - 12.08.2014 =
+* Update : We updated all functionality for wordpress 4.0-beta3.
+* Bugfix : Security Exploit was fixed.
+
 = V1.1.9 - 06.06.2014 =
 * Bugfix : The bug related to the search by image custom fields in the Gallery and Gallery pro plugin by BestWebSoft has been fixed.
 
@@ -116,6 +120,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.0 =
+We updated all functionality for wordpress 4.0-beta3. Security Exploit was fixed.
 
 = V1.1.9 =
 The bug related to the search by image custom fields in the Gallery and Gallery pro plugin by BestWebSoft has been fixed.

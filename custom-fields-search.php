@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.1.9
+Version: 1.2.0
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -124,10 +124,7 @@ if ( ! function_exists( 'cstmfldssrch_register_options' ) ) {
 				add_option( 'cstmfldssrch_options', $search_cusfields_defaults );
 		}
 
-		if ( 1 == $wpmu )
-			$cstmfldssrch_array_options = get_site_option( 'cstmfldssrch_options' );
-		else
-			$cstmfldssrch_array_options = get_option( 'cstmfldssrch_options' );
+		$cstmfldssrch_array_options = ( 1 == $wpmu ) ? get_site_option( 'cstmfldssrch_options' ) : get_option( 'cstmfldssrch_options' );
 	}
 }
 
@@ -138,7 +135,7 @@ if ( ! function_exists ( 'cstmfldssrch_version_check' ) ) {
 		$require_wp		=	"3.0"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
-			if( is_plugin_active( $plugin ) ) {
+			if ( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
 				wp_die( "<strong>" . $cstmfldssrch_plugin_info['Name'] . " </strong> " . __( 'requires', 'custom-fields-search' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'custom-fields-search') . "<br /><br />" . __( 'Back to the WordPress', 'custom-fields-search') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'custom-fields-search') . "</a>." );
 			}
