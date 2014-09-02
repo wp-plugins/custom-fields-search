@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.2.0
+Version: 1.2.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -197,7 +197,7 @@ if( ! function_exists( 'cstmfldssrch_request' ) ) {
 				}
 			}
 			$cusfields_sql_request = "'" . implode("', '", $cstmfldssrch_array_options ) . "'"; /* forming a string with the list of meta_key, which user has selected */
-			$user_request = trim ( $wp_query->query_vars['s'] );
+			$user_request = esc_sql( trim( $wp_query->query_vars['s'] ) );
 			$user_request_arr = preg_split( "/[\s,]+/", $user_request ); /* The user's regular expressions are used to separate array for the desired keywords */
 			$where .=  " OR (" . $wpdb->postmeta . ".meta_key IN (" . $cusfields_sql_request . ") "; /* Modify the request */
 

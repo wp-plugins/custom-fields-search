@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
 Tested up to: 4.0-beta3
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -75,6 +75,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.2.1 - 02.09.2014 =
+* Bugfix : We made changes to the search sql-query.
+
 = V1.2.0 - 12.08.2014 =
 * Update : We updated all functionality for wordpress 4.0-beta3.
 * Bugfix : Security Exploit was fixed.
@@ -120,6 +123,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.1 =
+We made changes to the search sql-query.
 
 = V1.2.0 =
 We updated all functionality for wordpress 4.0-beta3. Security Exploit was fixed.
