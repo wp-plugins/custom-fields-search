@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 1.2.1
+Tested up to: 4.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -27,7 +27,7 @@ http://www.youtube.com/watch?v=evQI4T5v9DA
 The author of the Custom Fields Search also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=591bf97cadc3e21606c79b37e04e4543">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater-pro/?k=591bf97cadc3e21606c79b37e04e4543">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -74,6 +74,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. Custom fields search Settings page.
 
 == Changelog ==
+
+= V1.2.2 - 26.12.2014 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 4.1.
 
 = V1.2.1 - 02.09.2014 =
 * Bugfix : We made changes to the search sql-query.
@@ -123,6 +127,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.2 =
+BWS plugins section is updated. We updated all functionality for wordpress 4.1.
 
 = V1.2.1 =
 We made changes to the search sql-query.
