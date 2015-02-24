@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-fields-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-26 16:35+0300\n"
+"POT-Creation-Date: 2015-02-24 14:25+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <http://support.bestwebsoft.com>\n"
@@ -20,94 +20,98 @@ msgstr ""
 msgid "Custom fields search settings"
 msgstr "Настройки Custom Fields Search"
 
-#: custom-fields-search.php:80
-msgid "Custom fields search"
-msgstr "Custom fields search"
-
-#: custom-fields-search.php:145
+#: custom-fields-search.php:159
 msgid "requires"
 msgstr "требует"
 
-#: custom-fields-search.php:145
+#: custom-fields-search.php:159
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
 msgstr "или выше, поэтому он был деактивирован! Пожалуйста, обновите WordPress и попробуйте еще раз."
 
-#: custom-fields-search.php:145
+#: custom-fields-search.php:159
 msgid "Back to the WordPress"
 msgstr "Вернуться к WordPress на"
 
-#: custom-fields-search.php:145
+#: custom-fields-search.php:159
 msgid "Plugins page"
 msgstr "Страницу плагинов"
 
-#: custom-fields-search.php:258
+#: custom-fields-search.php:272
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: custom-fields-search.php:269
-#: custom-fields-search.php:345
-#: custom-fields-search.php:357
+#: custom-fields-search.php:286
+#: custom-fields-search.php:367
+#: custom-fields-search.php:381
 msgid "Settings"
 msgstr "Настройки"
 
-#: custom-fields-search.php:270
-#: custom-fields-search.php:358
+#: custom-fields-search.php:287
+#: custom-fields-search.php:382
 msgid "FAQ"
-msgstr "Часто задаваемые вопросы"
+msgstr "FAQ"
 
-#: custom-fields-search.php:273
+#: custom-fields-search.php:290
 msgid "Notice:"
 msgstr "Внимание:"
 
-#: custom-fields-search.php:273
+#: custom-fields-search.php:290
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
 
-#: custom-fields-search.php:278
+#: custom-fields-search.php:295
 msgid "Enable search for the custom field:"
 msgstr "Отображать поиск по кастомных полям для:"
 
-#: custom-fields-search.php:302
+#: custom-fields-search.php:319
 msgid "custom post type"
 msgstr "кастомный тип постов"
 
-#: custom-fields-search.php:306
+#: custom-fields-search.php:323
 msgid "You need to"
 msgstr "Вам нужно"
 
-#: custom-fields-search.php:306
-msgid "activate plugin Custom Search"
-msgstr "активировать плагин Custom Search"
+#: custom-fields-search.php:323
+msgid "activate plugin"
+msgstr "активировать плагин"
 
-#: custom-fields-search.php:308
+#: custom-fields-search.php:325
 msgid "If the type of the post is not default - you need to install and activate the plugin"
 msgstr "Если тип записи не стандартный - вам необходимо установить и активировать плагин"
 
-#: custom-fields-search.php:308
-msgid "Custom Search"
-msgstr "Custom Search"
-
-#: custom-fields-search.php:317
-msgid "Save Changes"
-msgstr "Сохранить изменения"
-
-#: custom-fields-search.php:323
+#: custom-fields-search.php:331
 msgid "Custom fields not found."
 msgstr "Кастомные поля не найдены."
 
-#: custom-fields-search.php:328
+#: custom-fields-search.php:335
+msgid "Show hidden fields"
+msgstr "Отображать скрытые поля"
+
+#: custom-fields-search.php:342
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: custom-fields-search.php:349
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr " Если вам понравился плагин то поставте нам 5 звезд на WordPress"
 
-#: custom-fields-search.php:329
+#: custom-fields-search.php:350
 msgid "Rate the plugin"
 msgstr "Оценить плагин"
 
-#: custom-fields-search.php:332
+#: custom-fields-search.php:353
 msgid "If there is something wrong about it, please contact us"
 msgstr "Если у вас есть какие-то вопросы, обращайтесь"
 
-#: custom-fields-search.php:359
+#: custom-fields-search.php:383
 msgid "Support"
 msgstr "Тех.поддержка"
 
+#~ msgid "Custom fields search"
+#~ msgstr "Custom fields search"
+
+#~ msgid "activate plugin Custom Search"
+#~ msgstr "активировать плагин Custom Search"
+
+#~ msgid "Custom Search"
+#~ msgstr "Custom Search"

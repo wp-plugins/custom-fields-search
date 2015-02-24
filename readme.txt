@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 1.2.2
+Tested up to: 4.1.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -26,6 +26,7 @@ http://www.youtube.com/watch?v=evQI4T5v9DA
 
 The author of the Custom Fields Search also recommends the following plugins:
 
+* <a href="http://wordpress.org/plugins/custom-search-plugin/">Custom Search</a> - This handy plugin allows extending standard WordPress search functionality by adding custom post types to it. Hence, if you would like to have portfolios, galleries or any other custom post type on your website to be displayed in the search results, Custom Search plugin will be the best solution.
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater-pro/?k=591bf97cadc3e21606c79b37e04e4543">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
@@ -51,6 +52,8 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. Plugin settings are available in "BWS Plugins"->"Custom fields search".
 
+<a href="https://docs.google.com/document/d/1qMu8tdkk8PR6RQkSLIQOObhsuAVScEB4To9SXZAM2bI/edit" target="_blank">View a Step-by-step Instruction on Custom fields search Installation</a>.
+
 == Frequently Asked Questions ==
 
 = Search does not work. What's the problem? =
@@ -74,6 +77,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. Custom fields search Settings page.
 
 == Changelog ==
+
+= V1.2.3 - 24.02.2015 =
+* NEW : An option to add hidden custom fields (the titles of which begin with an underscore) to the search was added.
 
 = V1.2.2 - 26.12.2014 =
 * Update : BWS plugins section is updated.
@@ -127,6 +133,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.3 =
+An option to add hidden custom fields (the titles of which begin with an underscore) to the search was added.
 
 = V1.2.2 =
 BWS plugins section is updated. We updated all functionality for wordpress 4.1.
