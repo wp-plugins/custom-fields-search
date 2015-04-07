@@ -1,10 +1,10 @@
-=== Custom Fields Search ===
+=== Custom Fields Search by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
-Tested up to: 4.1.1
-Stable tag: 1.2.3
+Tested up to: 4.2-beta4
+Stable tag: 1.2.4
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -14,6 +14,8 @@ This plugin allows you to add website search any existing custom fields.
 This plugin allows you to add custom website search field in any post. It comes with a list of custom fields. All you need is to choose which of them you want to see in search. Make your site useful and effective with the Custom Field Search Plugin.
 
 http://www.youtube.com/watch?v=evQI4T5v9DA
+
+<a href="http://www.youtube.com/watch?v=mhBI9FY7Bt4" target="_blank">Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/custom-fields-search/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -33,7 +35,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 = Translation =
 
 * Russian (ru_RU)
-* Spanish (es_ES)(thanks to <a href="mailto:mquico@gmail.com">Mquico</a>)
+* Spanish (es_ES) (thanks to <a href="mailto:mquico@gmail.com">Mquico</a>)
 * Ukrainian (uk)
  
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -53,6 +55,8 @@ We can fix some things for free for the users who provide translation of our plu
 3. Plugin settings are available in "BWS Plugins"->"Custom fields search".
 
 <a href="https://docs.google.com/document/d/1qMu8tdkk8PR6RQkSLIQOObhsuAVScEB4To9SXZAM2bI/edit" target="_blank">View a Step-by-step Instruction on Custom fields search Installation</a>.
+
+http://www.youtube.com/watch?v=mhBI9FY7Bt4
 
 == Frequently Asked Questions ==
 
@@ -77,6 +81,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. Custom fields search Settings page.
 
 == Changelog ==
+
+= V1.2.4 - 07.04.2015 =
+* Bugfix : Notice about 'is_search' being called incorrectly was fixed.
 
 = V1.2.3 - 24.02.2015 =
 * NEW : An option to add hidden custom fields (the titles of which begin with an underscore) to the search was added.
@@ -133,6 +140,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.4 =
+Notice about 'is_search' being called incorrectly was fixed.
 
 = V1.2.3 =
 An option to add hidden custom fields (the titles of which begin with an underscore) to the search was added.
