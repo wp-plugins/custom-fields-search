@@ -1,10 +1,10 @@
 === Custom Fields Search by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
-Tested up to: 4.2-beta4
-Stable tag: 1.2.4
+Tested up to: 4.2.2
+Stable tag: 1.2.5
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -18,6 +18,7 @@ http://www.youtube.com/watch?v=evQI4T5v9DA
 <a href="http://www.youtube.com/watch?v=mhBI9FY7Bt4" target="_blank">Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/custom-fields-search/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
@@ -71,6 +72,7 @@ Go to the Settings page and select custom fields that you would like to add to t
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -81,6 +83,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. Custom fields search Settings page.
 
 == Changelog ==
+
+= V1.2.5 - 19.05.2015 =
+* NEW : We added checkbox to mark all custom post types in the settings page.
+* Bugfix : We fixed errors when searching Gallery and Gallery Pro using custom fields.
+* Update : We updated all functionality for wordpress 4.2.2.
 
 = V1.2.4 - 07.04.2015 =
 * Bugfix : Notice about 'is_search' being called incorrectly was fixed.
@@ -140,6 +147,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.5 =
+We fixed errors when searching Gallery and Gallery Pro using custom fields. We added checkbox to mark all custom post types in the settings page. We updated all functionality for wordpress 4.2.2.
 
 = V1.2.4 =
 Notice about 'is_search' being called incorrectly was fixed.

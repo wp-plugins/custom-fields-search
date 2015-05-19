@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.2.4
+Version: 1.2.5
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -148,15 +148,19 @@ if( ! function_exists( 'cstmfldssrch_request' ) ) {
 					}
 				}
 			}
-			$cusfields_sql_request = "'" . implode( "', '", $cstmfldssrch_options['fields'] ) . "'"; /* forming a string with the list of meta_key, which user has selected */
+			
 			$user_request = esc_sql( trim( $wp_query->query_vars['s'] ) );
 			$user_request_arr = preg_split( "/[\s,]+/", $user_request ); /* The user's regular expressions are used to separate array for the desired keywords */
-			$where .=  " OR (" . $wpdb->postmeta . ".meta_key IN (" . $cusfields_sql_request . ") "; /* Modify the request */
 
-			foreach ( $user_request_arr as $value ) {
-				$where .= "AND " . $wpdb->postmeta . ".meta_value LIKE '%" . $value . "%' ";
-			} 
-			$where .= $end_of_where_request . ") ";
+			if ( ! empty( $cstmfldssrch_options['fields'] ) ) {
+				$cusfields_sql_request = "'" . implode( "', '", $cstmfldssrch_options['fields'] ) . "'"; /* forming a string with the list of meta_key, which user has selected */
+				$where .=  " OR (" . $wpdb->postmeta . ".meta_key IN (" . $cusfields_sql_request . ") "; /* Modify the request */
+				foreach ( $user_request_arr as $value ) {
+					$where .= "AND " . $wpdb->postmeta . ".meta_value LIKE '%" . $value . "%' ";
+				} 
+				$where .= $end_of_where_request . ") ";
+			}
+
 			/* This code special for gallery plugin */
 			if ( ! empty( $flag_gllr_image ) ) {
 				foreach ( $flag_gllr_image as $flag_gllr_image_key => $flag_gllr_image_value ) {
@@ -228,6 +232,7 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 							<th scope="row"><?php _e( 'Enable search for the custom field:', 'custom-fields-search' ); ?></th>
 							<?php if ( is_plugin_active( 'custom-search-pro/custom-search-pro.php' ) || is_plugin_active( 'custom-search-plugin/custom-search-plugin.php' ) ) { ?>
 								<td>
+									<div id="cstmfldssrch_div_select_all" style="display:none;"><label ><input id="cstmfldssrch_select_all" type="checkbox" /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-fields-search' ); ?></strong></span></label></div>
 									<?php foreach ( $meta_key_result as $value ) { ?>
 										<label><input type="checkbox" <?php if ( in_array( $value, $cstmfldssrch_options['fields'] ) ) echo 'checked="checked"'; ?> name="cstmfldssrch_fields_array[]" value="<?php echo $value; ?>" /><span class="value_of_metakey"><?php echo $value; ?></span></label><br />
 									<?php }	?>
@@ -235,6 +240,7 @@ if ( ! function_exists( 'cstmfldssrch_page_of_settings' ) ) {
 							<?php } else {
 								$i = 1; ?>
 								<td>
+									<div id="cstmfldssrch_div_select_all" style="display:none;"><label ><input id="cstmfldssrch_select_all" type="checkbox" /><span style="text-transform: capitalize; padding-left: 5px;"><strong><?php _e( 'All', 'custom-fields-search' ); ?></strong></span></label></div>
 									<?php foreach ( $meta_key_result as $value ) {
 										if ( FALSE !== in_array( $value, $meta_key_custom_posts ) ) {
 											$list_custom_key[ $i ] = $value;
