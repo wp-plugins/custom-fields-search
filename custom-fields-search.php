@@ -4,7 +4,7 @@ Plugin Name: Custom Fields Search by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows you to add website search any existing custom fields.
 Author: BestWebSoft
-Version: 1.2.5
+Version: 1.2.6
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */

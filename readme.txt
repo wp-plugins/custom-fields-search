@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add custom fields to search, book custom post type, castom, custom,  cutom, custom field, custom fields search, custom post, custom search, custom search plugin, default post types, field, feld, include custom fields in search, portfolio custom post type, post, search, serach, search by custom fields, search by custom post types, website search
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv2 or later
 
 This plugin allows you to add website search any existing custom fields.
@@ -84,6 +84,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.2.6 - 09.07.2014 =
+* Update : BWS plugins section is updated.
+
 = V1.2.5 - 19.05.2015 =
 * NEW : We added checkbox to mark all custom post types in the settings page.
 * Bugfix : We fixed errors when searching Gallery and Gallery Pro using custom fields.
@@ -147,6 +150,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : Updated all functionality for wordpress 3.0, 3.1, 3.2.
 
 == Upgrade Notice ==
+
+= V1.2.6 =
+BWS plugins section is updated.
 
 = V1.2.5 =
 We fixed errors when searching Gallery and Gallery Pro using custom fields. We added checkbox to mark all custom post types in the settings page. We updated all functionality for wordpress 4.2.2.
